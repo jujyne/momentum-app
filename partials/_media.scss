@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+    #todo-modal {
+        width:80vmin;
+        max-height: 40vmin;
+        margin-right: 0; 
+        top: 70%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+    }
+    #todo-modal__textbox{
+        width: 70vmin;
+        font-size: 3vmin;
+    }
+        .todo-item{
+            max-width: 70vmin;
+        }
+}

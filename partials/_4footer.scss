@@ -1,0 +1,375 @@
+#footer__section1{
+    height:10vh;
+    width: auto;
+    max-width: 50vw;
+    padding-left: 10vw;
+    padding-right:10vw;
+    @include center;
+    flex-direction:column;
+}
+
+    #quote-modal{
+        border: none;
+        z-index: 5;
+        position:fixed;
+        height: 40vmin;
+        width: 50vmin;
+        margin-bottom: 20vmin;
+        @include center;
+        background-color: white;
+        border-radius: 5vmin;
+        display:none;
+    
+    }
+
+        #quote-modal-container{
+            @include center;
+            flex-direction:column;
+        }
+
+
+            #quote{
+                font-size: 2.5vmin;
+                background-color: #e1dbd6;
+                border-radius: 0.7vmin;
+                font-family: inherit;
+                border: 0.05vmin solid black;
+            }
+
+            #quote::placeholder{
+                font-style: italic;
+            }
+
+            #author{
+                background-color: #e1dbd6;
+                border: 0.05vmin solid black;
+                border-radius: 2vmin;
+                font-size: 2.5vmin;
+                font-family: inherit;
+                margin-top: 2vmin;
+                color:black;
+                input [type="text"]{
+                    background-color: #221205;
+                    color:black;
+                }
+            }
+
+            #author::placeholder{
+                font-style: italic;
+            }
+
+
+            .quote-buttons {
+                margin-top: 2vmin;
+                padding: 1vmin 2vmin;
+                border-radius: 2vmin;
+                font-family: inherit;
+                font-weight: bold;
+                border:none;
+                color:white;
+                background-color: black;
+                cursor:pointer;
+                font-size: 2.5vmin;
+            }
+
+            .quote-buttons:hover {
+                color:white;
+                background-color: gray;
+            }
+
+
+    #footer__quote{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity:1;
+        font-size:$large-font;
+        font-style: italic;
+        cursor: default;
+        text-align:center;
+    }
+
+        #footer__quote-area{
+            font-size:$small-font;
+            text-align: center;
+        }
+
+
+    #footer__quote-author{
+        text-align: left;
+        padding-top: 2vmin;
+    }
+
+
+    .edit-image, #footer__quote__randomizer{
+        height:auto;
+        width: 4vmin;
+        opacity:0.7;
+        padding-top:1.5vmin;
+    } 
+
+
+    #footer__quote__randomizer{
+        margin-left:2vmin;
+    }
+    
+
+    .button-icons{
+        text-decoration: none;
+        cursor: pointer;
+        background: transparent;
+        border:none;
+        padding: none;
+    }
+
+
+
+    #footer__quote__edit-button:hover{
+        border-radius: 1vmin;
+        padding:none;
+        #footer__quote__edit{
+            opacity:1;
+        }
+    }
+
+    #footer__quote__random-button:hover{
+        border-radius: 1vmin;
+        padding:none;
+        #footer__quote__randomizer{
+            opacity:1;
+        }
+    }
+
+
+
+#footer__section2{
+    height:10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    #footer__left{
+        display: flex;
+        align-items: center;
+        padding-left: 3vmin;
+    }
+        
+        #footer__left__button{
+            font-size: $xsmall-font;
+            border:none;
+            color:white;
+            cursor: pointer;
+            background: transparent;
+            font-family: inherit;  
+            opacity: 0.6;
+        }
+            #change-image-icon{
+                width:6vmin;
+            }
+        
+        #footer__left__button:hover {
+            opacity:1;
+        }
+
+        #settings-button-visible {
+            display: block;
+        }
+
+
+#footer__right{
+    height:auto;
+    width: 20vmin;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-right: 1vmin;
+}
+
+    #todo__container{
+        display: flex;
+        align-items:center;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+        #todo-title{
+            display:flex;
+            align-items: center;
+            font-weight: bold;
+            justify-content: flex-end;
+        }
+
+        #todo-icon{
+            font-size: $xsmall-font;
+            border:none;
+            color:white;
+            text-align:center;
+            text-decoration: none;
+            cursor: pointer;
+            background: transparent;
+            font-family: inherit;
+            padding-left:6vmin;
+        }
+
+            #todo-icon-img{
+                width:5vmin;
+                opacity:0.6
+            }
+
+            #todo-icon-img:hover{
+                opacity:1;
+            }
+
+
+    #todo-modal{
+        position: fixed;
+        border: none;
+        z-index: 5;
+        min-height:30vmin;
+        width: 45vmin;
+        max-height: 80vmin;
+        display: none;
+        align-items:center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 2vmin;
+        color: black;
+        flex-direction: column;
+        margin-right:30vmin;
+    }
+
+        #modal__textbox-title{
+            width:40vmin;
+            height:5vmin;
+            font-weight: bold;
+            text-align: center;
+            padding-top:2vmin;
+            font-size:$small-font;
+            }
+
+        #todo-modal__textbox{
+            padding: 1vmin 1vmin;
+            overflow-y: auto;
+            overflow-x: hidden;
+            min-height:20vmin;
+            width: 40vmin;
+            max-height: 80vmin;
+            display: flex;
+            align-items:flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            text-align: left;
+        }
+
+            #todo-modal__textbox::-webkit-scrollbar {
+                width: 0.5vmin;
+                background-color: #F5F5F5;
+            }
+  
+            #todo-modal__textbox::-webkit-scrollbar-thumb {
+                border-radius: 1vmin;
+                -webkit-box-shadow: inset 0 0 0.375vmin rgba(0, 0, 0, 0.3);
+                background-color: gray;
+            }
+
+            .todo-item{
+                display: flex;
+                flex-direction:row;
+                align-items: flex-start;
+                justify-content: flex-start;
+                width:auto;
+                max-width: 40vmin;
+                font-size:2.5vmin;
+            }
+        
+            .todo-item:hover{
+                .delete-button{display:block;}
+            }
+
+                .checkbox{
+                    min-width: 2vmin;
+                    min-height: 2vmin;
+                }
+                .delete-icon{
+                height:2vmin;
+                }
+                .delete-icon:hover {
+                    border-radius: 0.5vmin;
+                    background-color: rgba(255, 0, 0, 0.4); 
+                }
+
+                .delete-button{
+                    display:none;
+                    padding:0;
+                    border:none;
+                    background-color: transparent;
+                }
+
+
+        #todo-modal__bottom{
+            @include center;
+            height: 20%;
+            padding-bottom:2vmin;
+        }
+
+            .todo-buttons {
+                margin-left:1vmin;
+                margin-right:1vmin;
+                padding: 1vmin 2vmin;
+                border-radius: 2vmin;   
+                font-family: inherit;
+                font-weight: bold;
+                font-size: $xsmall-font;
+                border:none;
+                color:white;
+                background-color: black;
+                cursor:pointer;
+            }
+
+            .todo-buttons:hover {
+                color:white;
+                background-color: gray;
+            }
+
+
+            #todo-modal__bottom__add-text{
+                display:none;
+                flex-direction: row;
+                align-items:center;
+                justify-content: center;
+                height:6vmin;
+                width:40vmin;
+                background-color: black;
+                position:fixed;
+                text-align: center;
+                border-radius: 2vmin;
+            }
+
+                #todo__submit{
+                    font-family: inherit;
+                    background-color: white;
+                    border-radius: 2vmin;
+                    color:black;
+                    padding:0.5vmin 2vmin;
+                    margin-left: 2vmin;
+                    border:none;
+                    font-weight: bold;
+                    font-size: $xsmall-font;
+                    cursor:pointer;
+                }
+
+                #todo__submit:hover {
+                    background-color: gray;
+                }
+
+                #todo{
+                    font-size: $xsmall-font;
+                    border:none;
+                }
+
+
+
+
+    

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <div id="name-modal">
+        <div id="name-modal-container">
+            <label for="name">Hi! What's your name? </label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <button onclick="submitName()" id="submit-name">Done</button>
+        </div>
+    </div>
+    
+    <header>
+        <nav>
+            <div id="nav__left">
+                <button id="change-name"> <img id="user-icon"src="images/user-icon.png" alt="user-icon"></button>
+            </div>
+        </nav>
+        
+    
+    </header>
+
+    
+
+    <main>
+        
+        <h1 id="main__time"></h1>
+        <p id="greeting__name__container">
+                <span id="main__greeting"></span>
+                <span id="greeting__name"></span>   
+        </p>
+        <p id="main__focus__question">What's your main focus today?</p>
+        <div id="main__focus__text-container">
+            <p id="main__focus__text">___________</p>
+            <button id="focus__edit-button" class="button-icons"><img class ="edit-image" id= "focus__edit-image" src="images/footer__quote__image.png" alt="edit-logo"></button>
+            <div  id="focus-modal">
+                <div id="focus-modal-container">
+                    <input type="text" id="focus" placeholder="Type your focus here">
+                    <button onclick= submitFocus() id="focus__submit">OK</button>
+                </div>
+            </div>
+        </div>
+            
+    </main>
+
+    <footer >
+        <section id="footer__section1">
+
+            <div id="quote-modal">
+                <div id="quote-modal-container">
+                    <textarea id="quote" name="quote" placeholder="Please enter your quote here" cols="30" rows="5"></textarea>
+                    <input type="text" id="author" placeholder="Author's Name">
+                    <div>
+                        <button onclick="submitQuote()" id="submit-quote" class="quote-buttons">Submit</button>
+                        <button id="cancel-quote" class="quote-buttons">Cancel</button>
+                        
+                    </div>
+                    
+                </div>
+            </div> 
+
+            <div id="footer__quote">
+                <h3 id="footer__quote-area"></h3>
+            </div>
+
+            <div id="author-container">
+                <span id="footer__quote-author"></span>
+                <button onclick="setRandomQuote()" id="footer__quote__random-button" class="button-icons"><img id="footer__quote__randomizer" src="images/footer__quote_randomizer.png" alt="randomizer"></button>
+                <button id="footer__quote__edit-button" class="button-icons"><img class ="edit-image" id="footer__quote__edit" src="images/footer__quote__image.png" alt="edit-logo"></button>
+            </div>
+            
+
+        </section>
+
+        <section id="footer__section2">
+
+
+            <div id="footer__left">
+                <button id="footer__left__button"><img id="change-image-icon" src="images/change-image.png" alt="change-image-icon"></button>
+            </div>
+
+            
+            <div id="footer__right">
+                
+                <div id="todo__container">
+                    <div id="todo-title">
+                        <button id="todo-icon"><img id="todo-icon-img" src="images/todo-icon.png" alt="todo-icon"></button>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div id="todo-modal">
+                      <p id="modal__textbox-title">My Todo List</p>
+                      <div id="todo-modal__textbox">
+                      </div> 
+
+                      <div id="todo-modal__bottom">
+                        <button id="todo-button__add" class="todo-buttons">Add</button>
+
+                      <div id="todo-modal__bottom__add-text">
+                            <input type="text" id="todo" placeholder="Type here">
+                            <button onclick= submitTodoList() id="todo__submit">OK</button>
+                        </div>
+                  
+                        <button id="todo-button__cancel" class="todo-buttons">Close</button>
+                      </div>
+                </div>
+
+            </div>
+
+        </section>
+        
+    </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+//nav
+
+#nav__left{
+    padding-left: 3vmin;
+}
+    #change-name{
+        font-size: $xsmall-font;
+        border:none;
+        cursor: pointer;
+        background: transparent;
+        opacity:0.6; 
+    }
+    #change-name:hover {
+        opacity:1;
+    }
+
+    #user-icon{
+        width: 4vmin;
+    }

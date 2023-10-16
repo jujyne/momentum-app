@@ -1,0 +1,114 @@
+//main
+
+#main__time{
+    padding-bottom:8vh;
+    font: {
+        size:$xlarge-font;
+        weight: bold;
+    } 
+}
+
+
+#greeting__name__container{
+    height: 3vh;
+    width:auto;
+    padding-bottom: 6vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align:center; 
+    font-size: $large-font; 
+}
+    
+#greeting__name{
+    padding-left:1vmin;
+}
+
+
+#main__focus__question{
+    font-size: $medium-font;
+    padding-bottom: 2vh;
+    @include center;
+}
+
+
+#main__focus__text-container{
+    @include center;
+}
+
+    #main__focus__text{
+        @include center;
+        font-family: inherit;
+        border:none;
+        padding-bottom: 1vmin;
+        border-bottom: 0.5vmin solid white;
+        outline:none;
+        font-style: italic;
+        color:white;
+        background-color: transparent;
+        font-size: $large-font;
+        cursor: default;
+    }
+
+    #focus__edit-button{
+        display:none;
+        height:auto;
+        width: 5vmin;
+        opacity:0.7;
+        #focus__edit-image{
+            width: 5vmin;
+        }
+    }
+    
+    #focus__edit-button:hover{
+        border-radius: 1vmin;
+        padding:none;
+        #footer__quote__edit{
+            opacity:1;
+        }
+    }
+
+
+    #focus-modal{
+        display: none;
+        flex-direction: row;
+        align-items:center;
+        justify-content: center;
+        height:8vmin;
+        width:60vmin;
+        background-color: white;
+        z-index: 5;
+        position:fixed;
+        text-align: center;
+        border-radius: 5vmin;
+    }
+        #focus-modal-container{
+            @include center;
+            flex-direction: row;
+        }
+            #focus{
+                outline: none;
+                color: black;
+            }
+
+            #focus::placeholder{
+                font-style: italic;
+            }
+
+
+            #focus__submit{
+                font-family: inherit;
+                background-color: black;
+                border-radius: 2.5vmin;
+                color:white;
+                padding: 1vmin 2vmin;
+                border:none;
+                font-size:$xsmall-font;
+            }
+            #focus__submit:hover {
+                background-color: gray;
+            }
+
+
+

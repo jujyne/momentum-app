@@ -1,0 +1,78 @@
+@import "partials/reset";
+@import url('https://fonts.cdnfonts.com/css/poppins?styles=20390');
+@import url('https://fonts.cdnfonts.com/css/oldsansblack?styles=35724');
+
+$xlarge-font: 15vmin ;
+$large-font: 5vmin;
+$medium-font:3.75vmin;
+$small-font:3.25vmin;
+$xsmall-font:2vmin;
+
+
+@mixin center{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+@mixin my-font{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    height: 100vh;
+    width:100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 3s ease-in-out;
+}
+nav{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    @include my-font;
+    font-size:$small-font;
+}
+
+main{
+    height: 70vh;
+    width: 100vw;
+    @include center;
+    flex-direction: column;
+    @include my-font;  
+}
+
+footer{
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    @include my-font;
+    font-size: $small-font;
+}
+
+input[type="text"]{
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: inherit;
+    color:white;
+    font-size: $medium-font;
+    text-align: center;
+}
+
+@import "partials/1name-modal";
+@import "partials/2header";
+@import "partials/3main";
+@import "partials/4footer";
+@import "partials/media";
